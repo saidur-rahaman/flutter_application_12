@@ -32,6 +32,11 @@ class MyApp extends StatelessWidget {
             ),
             Icon(
               Icons.star,
+              color: Colors.grey,
+              size: 60,
+            ),
+            Icon(
+              Icons.star,
               color: Colors.yellow,
               size: 60,
             ),
