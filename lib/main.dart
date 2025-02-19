@@ -15,24 +15,29 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Basic Flutter UI-02"),
-          backgroundColor: Color(blue[400]),
+          backgroundColor: Colors.blue[400],
           centerTitle: true,
         ),
         body: Row(
           children: [
             Icon(
-              Icons.memory,
+              Icons.star,
+              color: Colors.yellow,
               size: 60,
-              colour: Colors.red,
-
-            )
-            Text(
-              "Flutter Row",
-              style: TextStyle(),
-              color: Colors.blue,
-              fontSize: 40,
-              ),
+            ),
+            Icon(
+              Icons.star,
+              color: Colors.yellow,
+              size: 60,
+            ),
+            Icon(
+              Icons.star,
+              color: Colors.yellow,
+              size: 60,
             ),
           ],
         ),
-      )
+      ),
+    );
+  }
+}
