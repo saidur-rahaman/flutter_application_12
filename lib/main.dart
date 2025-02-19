@@ -1,44 +1,37 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyWidget());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "Flutter project",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Basic Flutter UI-02"),
-          backgroundColor: Colors.blue[400],
-          centerTitle: true,
+          title: const Text("Star Widget"),
         ),
         body: Container(
           height: double.infinity,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.star,
-                color: Colors.yellow,
-                size: 50,
+          width: double.infinity,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: List.generate(
+                100,
+                (index) => Icon(
+                  Icons.radar,
+                  color: Colors.yellow,
+                  size: index.toDouble(),
+                ),
               ),
-              Image(
-                image: AssetImage("assets/aa.png"), // Ensure path is correct
-                width: 100,
-                height: 100,
-              ),
-              Icon(
-                Icons.star,
-                color: Colors.yellow,
-                size: 50,
-              ),
-            ],
+            ),
           ),
         ),
       ),
